@@ -78,6 +78,7 @@ def send_view():
         time.sleep(random.uniform(0.3,1.2))
 
 threads=[]
-for i in range(500):
+for i in range(5000):
     t=threading.Thread(target=send_view);t.daemon=True;t.start();threads.append(t)
 for t in threads: t.join()
+
